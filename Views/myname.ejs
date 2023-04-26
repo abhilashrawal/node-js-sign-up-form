@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: linear-gradient(red,yellow,green,white,aqua);
+    
+    }
+    .c1{
+        color:blue;
+      
+    }
+    
+    
+</style>
+<body>
+   <ul> <marquee><h2>Once you submit after you will not be able to be changed.Fill Carefully</h2></marquee></ul>
+    <h1>Submit Your Detail Regarding Your Education:-</h1>
+    <br> <fieldset>
+    <br>  <legend align="center"><b>My Form</b></legend>
+    <form>
+        <div ><h2 id = "clock" onload="currentTime()"></h2></div><br>
+       <center><h1 class="c1" id="demoo"></h1></center> 
+       
+        <b>Enter your name:-<input type ="name" placeholder="Enter Your Name"><br><br></b>
+        <b> Enter your father name:-<input type ="name" placeholder="Enter Your father Name"><br><br></b>
+       <b> Enter your mother name:-<input type ="name" placeholder="Enter Your Mother Name"><br><br><br></b>
+       <b> Enter your email name:-<input type ="email" placeholder="Enter Your email"><br><br></b>
+       <b> Enter your mobile :-<input type ="text" placeholder="Enter Your Mobile Number"><br><br></b>
+        Mr.<input type="radio" name="p">
+        Mrs.<input type="radio" name="p"><br><br>
+       What is your preference: <input type="range" min="1" max="40"><br><br>
+       Upload your document:<BR><BR><input type="file"><BR><BR>
+     <br>
+     write something your opinion:<br>   <textarea rows="7" cols="30" ></textarea>
+
+     <h3>select your education</h3>
+     <select name="STUDY">
+        <option value="se">select</option>
+     <option value="b">bsc 9</option>
+     <option value="c">msc9</option>
+     <option value="d">ba arts</option>
+     <optgroup label="other">
+     <option value="e">bcom </option>
+    
+     <option value="f">bsc cs</option>
+    </optgroup>
+    <p>what you salery demand :</p><input type="number" name="num" min="10000" max="50000">
+    </select><br><br>
+    <button type="button">click me</button><br>
+   
+    <img src="mydog.jpg" alt="A photo of my form."><br>
+
+        <input type="submit" value="submit">
+
+    </form>
+</fieldset>
+    <script>
+    function currentTime() {
+        let date = new Date(); 
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        let session = "AM";
+      
+          
+        if(hh < 12){
+            session = "AM";
+         }
+         if(hh > 12){
+      hh = hh - 12;
+      session = "PM";
+   }
+      
+         hh = (hh < 10) ? "0" + hh : hh;
+         mm = (mm < 10) ? "0" + mm : mm;
+         ss = (ss < 10) ? "0" + ss : ss;
+          
+         let time = hh + ":" + mm + ":" + ss + " " + session;
+      
+        document.getElementById("clock").innerText = time; 
+        const t = setTimeout(function (){ currentTime() }, 1000); 
+       
+    }
+currentTime();
+ setTimeout(myGreeting, 3000);
+function myGreeting() {
+  document.getElementById("demoo").innerHTML ="Best Wishes From Abhilash Rawal"
+}
+
+
+   
+</script>
+
+
+
+</body>
+</html>
